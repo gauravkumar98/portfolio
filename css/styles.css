@@ -216,6 +216,15 @@ font-size:2rem;
 .iconColor:hover{
   color:gray;
 }
+/*skill icon*/
+.iconcolor {
+  color:#21094e;
+font-size:2rem;
+}
+
+.iconcolor:hover{
+  color:gray;
+}
 /*contact me*/
 .form-label{
   font-family: 'Exo', sans-serif;
