@@ -1,0 +1,283 @@
+
+.navbar-toggler-icon{
+    font-size: 1.7rem;
+
+}
+.navbar-toggler{
+    padding:0.5%;
+    margin: 4% 8%  0;
+
+}
+.textsize{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+/*index animation*/
+body{
+    font-family: 'Exo', sans-serif;
+
+
+}
+
+
+.context {
+    width: 100%;
+    position:absolute;
+    top:50vh
+
+
+}
+
+.hometext{
+    text-align: center;
+    color: #fff;
+    font-size: 4.2rem;
+    z-index: 3;
+
+}
+.homebelowtext{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.area{
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height:100vh;
+
+}
+
+.circles{
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    opacity: 0.2;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+/*index animation*/
+.name {
+  font-family: 'Exo', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+.nav-item {
+  padding-left: 50px;
+}
+
+.lastContact {
+  padding-right: 60px;
+}
+
+.div1 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.h1 {
+  font-family: 'Pattaya', sans-serif;
+  font-size: 3rem;
+}
+
+.skillMargin {
+  margin-right: 4%;
+  margin-left: 4%;
+  margin-bottom: 4%;
+  background-color: white;
+  font-size: 1.3rem;
+}
+
+.skillPra {
+  border-radius: 15px 50px;
+  padding: 1% 1%;
+}
+
+
+.iconColor {
+  color:#4e54c8;
+font-size:2rem;
+}
+
+.iconColor:hover{
+  color:gray;
+}
+/*contact me*/
+.form-label{
+  font-family: 'Exo', sans-serif;
+  font-size: 1rem;
+}
+.form-control:active{
+  border-color: #000;
+}
+.form-control:hover
+{
+  border-color: #23049d;
+}
+.contactForm{
+  font-family: 'Exo', sans-serif;
+  font-size: 1.5rem;
+}
+.contactForm:hover{
+  font-size: 1.7rem;
+}
+.contactForm2{
+  font-size: 1rem;
+  font-family: 'Exo', sans-serif;
+
+}
+.contactForm2:hover{
+  font-size: 1.2rem;
+
+}
+/*footer*/
+.footer_text:hover{
+  color:gray;
+}
+.footericonColor {
+  color: #3b14a7;
+  font-size:1.5rem;
+  padding-right: 5%;
+}
+.footericonColor:hover{
+  color:#000;
+  font-size:1.6rem;
+}
+.card{
+  margin: 6% 12%;
+  background-color: #faf3f3;
+  border-style: solid;
+  border-color:#000;
+  border-width: 2px;
+}
+.card:hover{
+
+    border-width: 3px;
+}
+.card-title{
+  text-align: center;
+  color: #3b14a7;
+}
+.card-title:hover{
+  font-size:1.3rem;
+}
+.card-body{
+  font-size:1.2rem;
+}
+.card-body:hover{
+  font-size:1.3rem;
+}
