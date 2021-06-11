@@ -51,6 +51,16 @@ body{
 
 
 }
+@media screen and (max-width: 800px) {
+.area{
+  height:60vh;
+  }
+  .context {
+    top:30vh;
+  }
+
+
+}
 
 .hometext{
     text-align: center;
