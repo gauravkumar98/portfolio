@@ -12,8 +12,29 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+/*typing effect*/
+.typing{
+  position: relative;
+}
+.typing::after{
+  content: "";
+  position: absolute;
+  right:-8px;
+  width: 1px;
+  height: 100%;
+  border-right: 2px solid white;
+  animation: blink 0.5s infinite ease;
+}
+@keyframes blink {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
 
-
+}
+/*typing effect close*/
 
 /*index animation*/
 body{
