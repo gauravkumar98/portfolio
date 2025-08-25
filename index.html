@@ -1,113 +1,123 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
 
-  <title>Gaurav Kumar</title>
-  <!--bootstrap link-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <!--fonts link-->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
-  <!--icon link-->
-  <link rel="icon" href="favicon.ico">
-  <!--javascript link-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  <!--external css link-->
-  <link rel="stylesheet" href="css/styles.css">
-  <!--icon link-->
-  <script src="https://kit.fontawesome.com/cecf3854a2.js" crossorigin="anonymous"></script>
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo:400,700">
-
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <!--navigation navbar-->
-  <a id="pag"></a>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
-    <a class="navbar-brand" href="#"><span class="name">Gaurav Kumar</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto ">
-        <li class=" nav-item">
-          <a class="nav-link active" href="#pag"><span class="textsize">HOME</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="skill.html"><span class="textsize">SKILL</span></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="education.html"><span class="textsize">EDUCATION</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="project.html"><span class="textsize">PROJECT</span></a>
-        </li>
-        <li class="nav-item lastContact">
-          <a class="nav-link" href="contact.html"><span class="textsize">CONTACT</span></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!--block 1-->
-  <div class="context">
-         <h1 class="hometext">Here I' am Gaurav</h1>
-        <p class="homebelowtext">I' am a <span class="typing"></span></p>
-
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="#intro">
+          <div
+            class="rounded-full bg-primary-500 text-white h-10 w-10 d-flex align-items-center justify-content-center logo">
+            KG</div>
+          <span id="nav-name" class="fw-semibold text-dark"></span>
+        </a>
       </div>
+    </nav>
+  </header>
+
+  <main class="container py-8">
+    <!-- Intro -->
+    <section id="intro" class="row align-items-center mb-8">
+      <div class="col-lg-7">
+        <h1 id="hero-title" class="display-6 fw-bold leading-tight"></h1>
+        <p id="hero-intro" class="lead text-muted mt-3"></p>
+        <p id="hero-tagline" class="small text-muted mb-0"></p>
+
+        <div class="mt-4 d-flex gap-2">
+          <a id="cta-projects" href="#experience" class="btn btn-primary">See Experience</a>
+          <a id="cta-contact" href="#contact" class="btn btn-outline-secondary">Contact Me</a>
+          <!-- Download resume in intro -->
+          <a id="intro-download-resume" class="btn btn-outline-primary ms-2" href="/Gaurav_Kumar_Resume.pdf" role="button"
+            aria-label="Download resume">
+            Download Resume
+          </a>
+        </div>
+        <!-- summary modal removed -->
+      </div>
+      <div class="col-lg-5 text-center">
+        <div class="avatar-placeholder mx-auto">
+          <!-- simple image avatar -->
+          <img src="./profile.jpeg" alt="profile" class=" avatar-image rounded-3xl " />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-8">
+      <h2 class="h4 fw-bold mb-3">Skills</h2>
+      <div id="skills-list" class="d-flex flex-wrap gap-2 mb-4"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mb-8">
+      <h2 class="h4 fw-bold mb-3">Experience</h2>
+      <div id="experience-list" class="row g-3"></div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="mb-8">
+      <h2 class="h4 fw-bold mb-3">Education</h2>
+      <div id="education-timeline-list" class="mt-4 position-relative timeline-list"></div>
+    </section>
 
 
-  <div class="area" >
-              <ul class="circles">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-              </ul>
-      </div >
-  <!--end block-->
-  <section>
-    
-  </section>
-  <!--footer-->
-  <footer class="text-center " style="background-color: #f1f1f1;">
-    <!-- Grid container -->
-    <div class="container pt-4">
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-link  footericonColor " href="https://www.facebook.com/gaurav.obroy.98" role="button" ><i class="fab fa-facebook-f"></i></a>
-        <!-- Google -->
-        <a class="btn btn-link  footericonColor " href="mailto:gauravkumar.en@gmail.com" role="button" ><i class="fas fa-envelope"></i></a>
+    <!-- Contact -->
+    <section id="contact" class="mb-8">
+      <h2 class="h4 fw-bold mb-3">Contact</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="contact-form" class="card p-3" name="submit-to-google-sheet">
+            <div class="mb-3">
+              <label class="form-label">Your name</label>
+              <input id="contact-name" class="form-control" name="Name" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input id="contact-email" type="email" name="Email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea id="contact-message" rows="4" class="form-control" name="Message" required></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </div>
+          </form>
+          <span id="msg"></span>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-4">
+            <h3 class="h6 fw-semibold">Get in touch</h3>
+            <div id="contact-details" class="text-muted small">
+              <!-- populated by JS: email, phone, links -->
+            </div>
+            <ul class="list-unstyled mb-0 mt-2" id="contact-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Instagram -->
-        <a class="btn btn-link  footericonColor" href="https://www.instagram.com/gaurav_roy.98/" role="button" ><i class="fab fa-instagram"></i></a>
+    <footer class="text-center text-muted py-6">
+      <small>&copy; <span id="footer-year"></span> <span id="footer-name"></span></small>
+    </footer>
+  </main>
 
-        <!-- Linkedin -->
-        <a class="btn btn-link  footericonColor" href="https://www.linkedin.com/in/gauravkumarroy/" role="button" ><i class="fab fa-linkedin"></i></a>
-        <!-- Github -->
-        <a class="btn btn-link footericonColor" href="https://github.com/gauravkumar98" role="button"><i class="fab fa-github"></i></a>
-        <!--HackerRank-->
-        <a class="btn btn-link footericonColor" href="https://www.hackerrank.com/gauravkumarroy" role="button"><i class="fab fa-hackerrank"></i></a>
-
-      </section>
-
-    </div>
-
-    <div class="text-center text-dark p-3" style="background-color:#c8c2bc;">
-      <span class="footer_text">© 2021 Copyright: Gaurav Kumar</span>
-
-    </div>
-  </footer>
-<!--footer end-->
-  <script type="text/javascript" src="javascript.js"></script>
+  <script src="constants.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

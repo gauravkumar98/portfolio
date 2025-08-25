@@ -1,0 +1,146 @@
+:root{
+  --brand: #0ea5a4;
+  --brand-dark: #0b7280;
+  --hackerrank: #2EC866;
+}
+
+body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+
+.logo{width:40px;height:40px;border-radius:9999px;background:var(--brand);color:white;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+.avatar-placeholder{width:140px;height:140px}
+
+.card{border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
+
+#intro{padding-top:12px;padding-bottom:12px}
+
+#skills-list .badge{background:transparent;border:1px solid rgba(14,165,164,0.12);color:var(--brand-dark);}
+
+.card{border-radius:12px}
+
+/* Shared vertical line for any container with .timeline-list */
+.timeline-list::before{
+  content:'';
+  position:absolute;
+  left:22px;
+  top:40px;
+  bottom:60px;
+  width:2px;
+  background:#e6e6e6;
+  border-radius:2px;
+  z-index:1;
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:2rem;
+  margin-left:56px; /* space for icon */
+  padding:0.5rem 1rem;
+  background:transparent;
+  border-radius:6px;
+  z-index:2;
+  min-width:0;
+  word-break:break-word;
+}
+
+.timeline-item:hover{background:rgba(14,165,164,0.03);transform:translateY(-3px);transition:all .18s ease}
+
+/* Icon positioned on the timeline line */
+.timeline-item .icon{
+  position:absolute;
+  left:-38px; /* centers the icon over the vertical line */
+  top:6px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:var(--brand);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 2px 6px rgba(14,165,164,0.15);
+  color:#fff;
+  z-index:3;
+}
+
+.timeline-item .icon svg{width:18px;height:18px;display:block;color:#fff;stroke:#fff}
+
+.timeline-item .date-badge{display:block;font-size:.85rem;color:#6b7280;margin:0 0 .4rem 0}
+.timeline-item h3{font-size:1.05rem;font-weight:700;margin:0 0 .25rem 0;color:#111827}
+.timeline-item p{color:#6b7280;margin:0}
+
+/* Responsive timeline improvements */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .timeline-list { padding-left: 5px; }
+  .timeline-list::before { left: 32px; }
+  .timeline-item { margin-left: 72px; padding: 0.75rem 1.5rem; font-size: 1.1rem; }
+  .timeline-item .icon { left: -65px; top: 40px; width: 40px; height: 40px; }
+}
+
+/* Tablet landscape and up */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .timeline-list { padding-left: 7px; }
+  .timeline-list::before { left: 26px; }
+  .timeline-item { margin-left: 60px; padding: 0.7rem 1.2rem; }
+  .timeline-item .icon { left: -57px; top: 36px; width: 36px; height: 36px; }
+}
+
+/* Tablet portrait */
+@media (max-width: 991px) and (min-width: 769px) {
+  .timeline-list { padding-left: 44px; }
+  .timeline-list::before { left: 14px;  top:70px}
+  .timeline-item { margin-left: 44px; padding: 0.6rem 1rem; }
+  .timeline-item .icon { left: -87px; top: 45px; width: 32px; height: 32px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline-list { padding-left: 28px; }
+  .timeline-list::before { left: 6px; }
+  .timeline-item { margin-left: 28px; padding: 0.5rem 0.7rem; font-size: 0.98rem; }
+  .timeline-item .icon { left: -62px; top: 60px; width: 28px; height: 28px; }
+  .timeline-item h3 { font-size: 1rem; }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .timeline-list { padding-left: 16px; }
+  .timeline-list::before { left: 2px; }
+  .timeline-item { margin-left: 16px; padding: 0.4rem 0.4rem; font-size: 0.93rem; }
+  .timeline-item .icon { left: -40px; top: 60px; width: 24px; height: 24px; }
+  .timeline-item h3 { font-size: 0.98rem; }
+}
+
+/* UX improvements */
+.nav-link{transition:color .18s ease, background-color .18s ease}
+.nav-link:hover{color:var(--brand-dark)}
+.btn-primary{background:var(--brand);border-color:var(--brand)}
+.btn-primary:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+
+/* Focus states */
+a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(14,165,164,0.18);outline-offset:2px}
+
+/* Responsive adjustments */
+@media (max-width: 768px){
+  .display-6{font-size:1.6rem}
+}
+
+/* Small helper */
+.small-muted{color:#6b7280}
+
+/* Contact icon-only styles */
+#contact-list { margin-top: 0.5rem; }
+#contact-list li { display: inline-block; margin-right: 0.5rem; }
+#contact-list li a { width:40px; height:40px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; color:var(--brand-dark); border:1px solid rgba(14,165,164,0.08); text-decoration:none; background:transparent; }
+#contact-list li a:hover, #contact-list li a:focus { background:var(--brand); color:#fff; border-color:var(--brand); box-shadow:0 6px 18px rgba(14,165,164,0.12); outline: none; }
+
+#contact-list li a.hackerrank { color: var(--hackerrank); border-color: rgba(46,200,102,0.12); }
+#contact-list li a.hackerrank:hover, #contact-list li a.hackerrank:focus { background: var(--hackerrank); color: #fff; border-color: var(--hackerrank); }
+
+.contact-icon { width:20px; height:20px; display:block; color:inherit; }
+.contact-icon path, .contact-icon rect, .contact-icon circle { fill: currentColor; stroke: none; }
+.contact-icon path[fill="#fff"], .contact-icon rect[fill="#fff"], .contact-icon circle[fill="#fff"] { fill: #fff; }
+
+/* Ensure visually-hidden (Bootstrap provides this) fallback */
+.visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
