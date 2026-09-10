@@ -14,18 +14,17 @@ function getExperienceDuration(startDate) {
     result += months + (months === 1 ? " month" : " months");
   }
   return result;
-  
 }
 const exp_date = getExperienceDuration(EXPERIENCE_START_DATE);
 const PROFILE = {
   name: "Gaurav Kumar",
   title: "Full Stack Developer",
-  shortIntro: `Versatile and detail-oriented Full Stack Developer with ${exp_date} of experience in building scalable web applications using Java, Spring Boot, and Angular.`,
-  tagline: "Passionate about clean, maintainable code and continuous improvement.",
+  shortIntro: `Results-driven Full Stack Developer with 4+ years of experience architecting and delivering Java/Spring Boot microservices and enterprise Angular applications at scale.`,
+  tagline: "Focused on modernizing systems, improving performance, and building reliable AI-enabled product experiences.",
   resumeUrl: "Gaurav_Kumar_Resume.pdf",
   contact: {
     email: "gauravkumar.en@gmail.com",
-    phone: "+91-7273826351",
+    phone: "+91 7273826351",
     location: "Hyderabad, India",
     links: [
       { label: "GitHub", url: "https://github.com/gauravkumar98" },
@@ -34,33 +33,186 @@ const PROFILE = {
     ]
   },
   skills: [
-    "Java (8+)", "J2EE", "Spring Boot", "Spring Security", "Hibernate", "RESTful API Design",
-    "Angular", "TypeScript", "JavaScript", "HTML5", "CSS3", "Jasmine", "Karma",
-    "Oracle", "SQL",
-    "Git", "GitHub", "Jenkins", "CI/CD", "SonarQube",
-    "JUnit", "Mockito", "TDD", "BDD",
-    "Splunk", "Caching strategies",
-    "Generative AI", "ChatGPT integration", "Agentic AI",
-    "LLM Integration", "System Design"
+    "Java 11/17/21",
+    "Spring",
+    "Spring Boot 3",
+    "Spring MVC",
+    "Spring Security",
+    "Spring Data JPA",
+    "Hibernate 6",
+    "HikariCP",
+    "RESTful APIs",
+    "OAuth2/JWT",
+    "Microservices",
+    "AWS Cloud Map",
+    "Amazon API Gateway",
+    "Application Load Balancer",
+    "Feign Client",
+    "Resilience4j",
+    "Kafka",
+    "Angular 14/21",
+    "Node.js 14/22",
+    "TypeScript",
+    "JavaScript",
+    "RxJS",
+    "Reactive Forms",
+    "Ag-Grid",
+    "Highcharts",
+    "SCSS/CSS",
+    "Jasmine",
+    "Karma",
+    "Jest",
+    "AWS ECS",
+    "Lambda",
+    "EventBridge",
+    "SSM",
+    "S3",
+    "Spring AI",
+    "Agentic AI",
+    "Prompt Engineering",
+    "GitHub Copilot",
+    "Amazon Q",
+    "Kiro",
+    "AI-DLC",
+    "SpecKit",
+    "PostgreSQL",
+    "Oracle",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "CI/CD",
+    "Git",
+    "Splunk",
+    "JUnit",
+    "Mockito",
+    "TDD",
+    "System Design",
+    "Design Patterns",
+    "SOLID Principles",
+    "OOP",
+    "API Design",
+    "Event-Driven Architecture",
+    "Scalability & Fault Tolerance"
+  ],
+  skillGroups: [
+    {
+      category: "Backend",
+      skills: [
+        "Java 11/17/21",
+        "Spring",
+        "Spring Boot 3",
+        "Spring MVC",
+        "Spring Security",
+        "Spring Data JPA",
+        "Hibernate 6",
+        "HikariCP",
+        "RESTful APIs",
+        "OAuth2/JWT",
+        "Microservices",
+        "Feign Client",
+        "Resilience4j",
+        "Kafka",
+        "API Design",
+        "System Design",
+        "Design Patterns",
+        "SOLID Principles",
+        "OOP"
+      ]
+    },
+    {
+      category: "Frontend",
+      skills: [
+        "Angular 14/21",
+        "Node.js 14/22",
+        "TypeScript",
+        "JavaScript",
+        "RxJS",
+        "Reactive Forms",
+        "Ag-Grid",
+        "Highcharts",
+        "SCSS/CSS",
+        "Jasmine",
+        "Karma",
+        "Jest"
+      ]
+    },
+    {
+      category: "Cloud & AI",
+      skills: [
+        "AWS Cloud Map",
+        "Amazon API Gateway",
+        "Application Load Balancer",
+        "AWS ECS",
+        "Lambda",
+        "EventBridge",
+        "SSM",
+        "S3",
+        "Spring AI",
+        "Agentic AI",
+        "Prompt Engineering",
+        "GitHub Copilot",
+        "Amazon Q",
+        "Kiro",
+        "AI-DLC",
+        "SpecKit",
+        "ChatGPT integration",
+        "LLM Integration"
+      ]
+    },
+    {
+      category: "Data & DevOps",
+      skills: [
+        "PostgreSQL",
+        "Oracle",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "CI/CD",
+        "Git",
+        "Splunk",
+        "JUnit",
+        "Mockito",
+        "TDD",
+        "Event-Driven Architecture",
+        "Scalability & Fault Tolerance"
+      ]
+    }
   ],
   experiences: [
     {
       company: "ADP Private Limited",
       link: "https://www.adp.com/",
-      role: "Senior Member Technical",
+      role: "Senior Software Developer",
       period: "July 2022 – Present",
       location: "Hyderabad, India",
-      summary: "Worked on Health Compliance (ACA, USA) and New Hire Reporting (PRWORA, USA) projects.",
-      details: [
-        "Developed scalable REST APIs for filing and furnish workflows.",
-        "Designed and built responsive, user-centric Angular UI for ACA compliance tracking.",
-        "Created a ChatGPT-powered UI assistant to explain IRS Form 1095-C (Line 14/16), improving support and self-service efficiency.",
-        "Integrated with third-party systems including Workday and internal ADP platforms using secure APIs.",
-        "Contributed to automation of compliance processing pipelines and workflows.",
-        "Created APIs and UI components for various sub-products as part of a strategic 'Land and Expand' initiative to onboard new clients.",
-        "Designed and developed a new onboarding experience from scratch for New Hire Reporting.",
-        "Developed a responsive UI to manage and verify new hire information.",
-        "Implemented secure API integrations to fetch employee data from different sources like Workday, Mosaic, CDN."
+      summary: "Architected and delivered distributed microservices and enterprise Angular applications for ACA compliance and onboarding platforms, leveraging modern Java/Spring Boot, Angular, and AWS technologies.",
+      projects: [
+        {
+          name: "ACA — Health Compliance & Distributed Systems Modernization",
+          summary: "Built and modernized a distributed microservices platform for ACA compliance processing and production support.",
+          details: [
+            "Architected a distributed microservices ecosystem on AWS ECS with AWS Cloud Map for dynamic service discovery and Amazon API Gateway / ALB for centralized request routing and rate limiting.",
+            "Used GitHub Copilot, Amazon Q, Kiro, AI-DLC, and SpecKit to drive Java 11→17 and 17→21 and Spring / Spring Boot 3 modernization, reducing manual effort in code analysis, refactoring, and dependency upgrades.",
+            "Diagnosed and resolved critical multithreading, synchronization, and concurrency defects in distributed services to improve system stability and eliminate race-condition-driven production issues.",
+            "Re-architected database connectivity from C3P0 to HikariCP, reducing connection overhead and increasing PostgreSQL throughput by 25%.",
+            "Owned production and QA issue resolution end-to-end by tracing failures across UI, REST APIs, services, and logs and delivering permanent fixes.",
+            "Built enterprise Angular screens integrated with Spring Boot REST APIs using Reactive Forms, reusable components, and RxJS-based async workflows.",
+            "Delivered interactive dashboards with ag-Grid Master-Detail and Highcharts for performance-focused compliance reporting and usability.",
+            "Used AWS EventBridge and Kafka to decouple high-volume compliance processing services and ensure resilience during peak loads.",
+            "Designed an Agentic AI framework on Spring AI to automate IRS Form 1095-C validation using structured LLM instructions and prompt engineering, creating reusable skills, instructions, and agents across the team."
+          ]
+        },
+        {
+          name: "NHR / PRWORA — Greenfield Reporting Platform",
+          summary: "Led the full-stack design and delivery of an enterprise onboarding application that automated client onboarding and reporting workflows.",
+          details: [
+            "Led greenfield development of an enterprise onboarding application, integrating Spring Boot 3 microservices with a reactive Angular frontend from architecture through delivery.",
+            "Architected automated onboarding workflows for Workday, Mosaic, and CDN integrations using Feign Client for sync data exchange and Kafka for async orchestration.",
+            "Built JasperReports-based monthly PDF reporting and scheduled billing batch jobs with automated email notifications, reducing manual bottlenecks and strengthening error handling and retry logic.",
+            "Used AWS SSM for centralized secrets and configuration management and deployed services on AWS ECS across Dev, QA, and Prod.",
+            "Designed service boundaries and sync vs async flows across Workday, Mosaic, and CDN integrations to balance consistency, scalability, and fault tolerance."
+          ]
+        }
       ]
     },
     {
@@ -69,30 +221,37 @@ const PROFILE = {
       role: "Trainee Software Engineer",
       period: "Jan 2022 – May 2022",
       location: "Pune, India",
-      summary: "Enterprise-grade UI development and software testing.",
-      details: [
-        "Developed a custom UI for NetApp testing infrastructure.",
-        "Improved QA workflows through front-end enhancements and automation.",
-        "Gained solid experience in enterprise-grade UI development and software testing best practices."
+      summary: "Worked on the NETAPP project, developing Angular-based UI solutions for testing infrastructure and QA automation workflows.",
+      projects: [
+        {
+          name: "NetApp Testing Infrastructure — Angular UI Development",
+          summary: "Developed custom front-end workflows for NetApp testing infrastructure with automated reporting and verification support.",
+          details: [
+            "Developed a custom UI for NetApp testing infrastructure using Angular and TypeScript to automate report generation and QA verification.",
+            "Collaborated in an Agile/Scrum environment and ensured code quality with JUnit and Mockito unit testing.",
+            "Improved front-end and QA workflows through reusable components, automation, and strong testing practices."
+          ]
+        }
       ]
     }
   ],
   education: [
     {
-      degree: "Bachelor of Technology (B.Tech), Computer Science Engineering",
-      school: "Jawaharlal Nehru Technological University Kakinada, Andhra Pradesh",
+      degree: "B.Tech in Computer Science Engineering",
+      school: "JNTU Kakinada, Andhra Pradesh",
       period: "2018 – 2022",
       percentage: "7.39 CGPA"
     },
     {
       degree: "Senior Secondary (PCM)",
-      school: "St. Kabir College, Bihar School Examination Board, Patna",
+      school: "St. Kabir College, Patna",
       period: "2018",
       percentage: "63.0%"
     }
   ],
   additional: [
-    "Open to relocation and remote opportunities",
-    "Passionate about clean code, system design, and emerging tech (e.g., GenAI)"
-  ],
+    "Early adopter of AI-assisted software development using GitHub Copilot, Amazon Q, Kiro, AI-DLC, and SpecKit.",
+    "Open to relocation and remote opportunities.",
+    "Passionate about clean code, system design, modernization, and AI-enabled engineering."
+  ]
 };

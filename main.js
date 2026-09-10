@@ -214,17 +214,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Render Skills
   const skillsList = document.getElementById("skills-list");
-  if (skillsList && PROFILE.skills) {
-    PROFILE.skills.forEach((skill) => {
-      const span = document.createElement("span");
-      span.className = "badge skill-badge px-3 py-2 mb-1 fw-semibold";
-      span.textContent = skill;
-      span.setAttribute("tabindex", "0");
-      span.setAttribute("role", "button");
-      span.setAttribute("aria-label", `Skill: ${skill}`);
-      span.title = skill;
-      skillsList.appendChild(span);
-    });
+  if (skillsList) {
+    const skillGroups = PROFILE.skillGroups || [{ category: "Skills", skills: PROFILE.skills || [] }];
+    skillsList.innerHTML = `
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Skills</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${skillGroups
+            .map(
+              (group) => `
+                <tr>
+                  <th>${group.category}</th>
+                  <td>${(group.skills || []).join(", ")}</td>
+                </tr>
+              `
+            )
+            .join("")}
+        </tbody>
+      </table>
+    `;
   }
 
   // Skill filter behavior
@@ -308,54 +321,46 @@ document.addEventListener("DOMContentLoaded", () => {
     col.className = "col-md-12";
     col.setAttribute("data-exp-idx", String(expIdx));
 
-    // Build details list with collapse for long lists
-    const visibleCount = 3;
-    const hasMore = exp.details && exp.details.length > visibleCount;
-    const detailsHtml = exp.details
-      .map(
-        (d, i) => `
-        <li class="exp-detail-item" ${
-          i >= visibleCount ? 'data-hidden="1" style="display:none"' : ""
-        }>${d}</li>
-      `
-      )
+    const projectBlocks = (exp.projects && exp.projects.length
+      ? exp.projects
+      : [{ name: exp.company, summary: exp.summary, details: exp.details || [] }]
+    )
+      .map((project, pIdx) => {
+        const projectDetails = project.details
+          .map(
+            (d) => `<li class="exp-detail-item">${d}</li>`
+          )
+          .join("");
+        const projectLabel = pIdx === 0 ? "Core Project" : "Key Initiative";
+
+        return `
+          <div class="experience-project">
+            <div class="project-header">
+              <span class="project-badge">${projectLabel}</span>
+              <h4>${project.name}</h4>
+            </div>
+            <p class="project-summary">${project.summary}</p>
+            <ul class="mb-0 exp-details-list">
+              ${projectDetails}
+            </ul>
+          </div>
+        `;
+      })
       .join("");
 
     col.innerHTML = `
-      <div class="card p-4 h-100 mb-3">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h3 class="h5 fw-bold mb-0">${exp.role} <a target="_blank" href="${
-      exp.link
-    }"><span class="text-primary">@ ${exp.company}</span></a></h3>
-          <span class="text-muted small">${exp.period}</span>
+      <div class="card p-4 h-100 mb-3 experience-card">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3 gap-2">
+          <h3 class="h5 fw-bold mb-0 experience-role">${exp.role} <a target="_blank" href="${exp.link}"><span class="text-primary company-name">@ ${exp.company}</span></a></h3>
+          <span class="experience-period">${exp.period}</span>
         </div>
-        <div class="mb-2 text-secondary small">${exp.location}</div>
-        <div class="mb-2">${exp.summary}</div>
-        <ul class="mb-0 ps-3 exp-details-list">
-          ${detailsHtml}
-        </ul>
-        ${
-          hasMore
-            ? '<div class="mt-3"><button class="btn btn-sm btn-outline-primary show-more-btn" type="button">Show more</button></div>'
-            : ""
-        }
+        <div class="mb-3 experience-location">${exp.location}</div>
+        ${exp.summary ? `<div class="mb-3 exp-company-summary">${exp.summary}</div>` : ""}
+        <div class="project-list">
+          ${projectBlocks}
+        </div>
       </div>
     `;
     expList.appendChild(col);
-    // Toggle logic for show more
-    if (hasMore) {
-      const btn = col.querySelector(".show-more-btn");
-      const hiddenItems = col.querySelectorAll(
-        '.exp-detail-item[data-hidden="1"]'
-      );
-      btn.addEventListener("click", () => {
-        const expanded = btn.getAttribute("data-expanded") === "1";
-        hiddenItems.forEach((it) => {
-          it.style.display = expanded ? "none" : "list-item";
-        });
-        btn.textContent = expanded ? "Show more" : "Show less";
-        btn.setAttribute("data-expanded", expanded ? "0" : "1");
-      });
-    }
   });
 });
